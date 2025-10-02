@@ -1,0 +1,36 @@
+# Local .terraform directories
+**/.terraform/*
+
+# Terrafrom state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Exclude variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Sensitive override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Plan output files
+*.plan
+tfplan
+
+# Provider lock file
+.terraform.lock.hcl
+
+# Service account keys or credentials
+*.json
+
+# Ignore editor/IDE files
+.vscode/
+.idea/
+.DS_Store
+
