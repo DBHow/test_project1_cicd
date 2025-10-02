@@ -1,0 +1,8 @@
+steps:
+- name: hashicorp/terraform:1.8.0
+  id: init
+  entrypoint: /bin/sh
+  args:
+  - -c
+  - |
+    terraform init
