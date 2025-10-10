@@ -24,3 +24,12 @@ resource "google_storage_bucket" "main_bucket" {
   }
 }
 
+
+resource "google_storage_bucket" "test_bucket_2" {
+  name          = "${var.project_id}-test-bucket-2"
+  location      = var.region
+  force_destroy = true
+
+  uniform_bucket_level_access = true
+
+}
