@@ -27,7 +27,6 @@ tfplan
 .terraform.lock.hcl
 
 # Service account keys or credentials
-*.json
 
 # Ignore editor/IDE files
 .vscode/
