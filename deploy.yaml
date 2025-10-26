@@ -1,4 +1,4 @@
 environment: test
 project_id: alpine-charge-473702-h4
 region: us-south1
-version: 0.1.7
+version: 0.1.8
