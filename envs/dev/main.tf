@@ -1,7 +1,10 @@
 locals {
   apis = [
     "compute.googleapis.com",
+    "iam.googleapis.com",
     "cloudresourcemanager.googleapis.com",
+    "sqladmin.googleapis.com",
+    "servicenetworking.googleapis.com"
   ]
 }
 resource "google_project_service" "enabled_apis" {
