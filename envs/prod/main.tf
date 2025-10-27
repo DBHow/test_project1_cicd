@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "main_bucket" {
-  name          = "${var.project_id}-test-bucket"
+  name          = "${var.project_id}-${var.environment}-bucket"
   location      = var.region
   force_destroy = true
 
@@ -19,9 +19,7 @@ resource "google_storage_bucket" "main_bucket" {
   }
 
   labels = {
-    environment = "development"
+    environment = var.environment
     managed_by  = "terraform"
   }
 }
-
-
