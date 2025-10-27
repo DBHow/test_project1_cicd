@@ -28,6 +28,9 @@ custom_rules = {
     direction   = "INGRESS"
     action      = "allow"
     ranges      = ["130.211.0.0/22", "35.191.0.0/16"]
+    use_service_accounts = false
+    sources              = []   # empty list means no source tags or SAs
+    targets              = []   # empty list means all targets (depends on direction)
     rules = [{ protocol = "tcp", ports = ["80", "443"] }]
     extra_attributes = { priority = 100 }
   }
