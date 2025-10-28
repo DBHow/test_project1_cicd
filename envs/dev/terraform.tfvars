@@ -35,3 +35,6 @@ custom_rules = {
     extra_attributes = { priority = 100 }
   }
 }
+
+pg_db_name = "pg_db_1"
+pg_user_name = "dba_master"

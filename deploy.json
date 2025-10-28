@@ -1,6 +1,8 @@
 {
-    "environment": "prod",
-    "project_id": "prod-project-476123",
+    "environment": "dev",
+    "project_id": "dev-project-476123",
     "region": "us-south1",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "description": "add a postgres db",
+    "submitter": "Gang.Hao"
 }

@@ -53,3 +53,18 @@ variable "custom_rules" {
   type        = any
   default     = {}
 }
+
+
+# -------------------------
+# PostgreSQL DB configuration
+# -------------------------
+variable "pg_db_name" {
+  description = "Database name"
+  type        = string
+  default     = "dev-postgres"
+}
+
+variable "pg_user_name" {
+  description = "Database name"
+  type        = string
+}
