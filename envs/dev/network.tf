@@ -15,4 +15,6 @@ module "firewall" {
   internal_ranges = module.network.subnets_ips
   internal_allow  = var.internal_allow
   custom_rules    = var.custom_rules
+
+  depends_on = [google_project_service.enabled_apis]
 }

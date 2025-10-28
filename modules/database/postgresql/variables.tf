@@ -22,3 +22,9 @@ variable "pg_user_password" {
   description = "Database password"
   type        = string
 }
+
+variable "private_network" {
+  description = "The VPC network self link for private IP configuration"
+  type        = string
+  default     = null
+}
