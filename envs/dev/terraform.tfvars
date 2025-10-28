@@ -36,5 +36,5 @@ custom_rules = {
   }
 }
 
-pg_db_name = "pg_db_1"
+pg_db_name = "pg-db-1"
 pg_user_name = "dba_master"
