@@ -25,6 +25,10 @@
 #   depends_on = [google_service_account.web_vm_sa]
 # }
 
+data "google_compute_default_service_account" "default" {
+  project = var.project_id
+}
+
 module "web_vm" {
   source = "../../modules/vm"
 
@@ -56,7 +60,10 @@ module "web_vm" {
   #   scopes = ["cloud-platform"]
   # }
 
-  service_account = null
+  service_account = {
+    email  = data.google_compute_default_service_account.default.email
+    scopes = ["cloud-platform"]
+  }
 
   depends_on = [google_project_service.enabled_apis]
 }
