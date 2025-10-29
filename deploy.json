@@ -2,7 +2,7 @@
     "environment": "dev",
     "project_id": "dev-project-476123",
     "region": "us-south1",
-    "version": "0.2.1",
-    "description": "remove vm instance",
+    "version": "0.2.2",
+    "description": "remove cloud sql",
     "submitter": "Gang.Hao"
 }
