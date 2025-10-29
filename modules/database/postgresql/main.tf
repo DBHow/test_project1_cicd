@@ -11,7 +11,7 @@ module "postgresql_single_zone" {
   edition              = "ENTERPRISE"
   tier                 = "db-custom-2-8192"
 
-  deletion_protection  = false
+  deletion_protection = false
 
   ip_configuration = {
     ipv4_enabled        = var.private_network == null ? true : false
@@ -20,7 +20,7 @@ module "postgresql_single_zone" {
     allocated_ip_range  = null
     authorized_networks = []
   }
-  
-  user_name = var.pg_user_name
+
+  user_name     = var.pg_user_name
   user_password = var.pg_user_password
 }
