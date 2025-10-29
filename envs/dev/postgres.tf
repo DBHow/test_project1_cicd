@@ -15,12 +15,12 @@
 #   project       = var.project_id
 # }
 
-# # Create Private Service Connection
-# resource "google_service_networking_connection" "private_vpc_connection" {
-#   network                 = module.network.network_self_link
-#   service                 = "servicenetworking.googleapis.com"
-#   reserved_peering_ranges = [google_compute_global_address.private_ip_address.name]
-# }
+# Create Private Service Connection
+resource "google_service_networking_connection" "private_vpc_connection" {
+  network                 = module.network.network_self_link
+  service                 = "servicenetworking.googleapis.com"
+  reserved_peering_ranges = [google_compute_global_address.private_ip_address.name]
+}
 
 # module "postgresql_db" {
 #   source = "../../modules/database/postgresql"
