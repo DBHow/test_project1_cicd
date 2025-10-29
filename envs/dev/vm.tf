@@ -1,12 +1,12 @@
 # Create service account for web VM
-# resource "google_service_account" "web_vm_sa" {
-#   account_id   = "web-vm-sa"
-#   display_name = "Web VM Service Account"
-#   description  = "Service account for web server VM"
-#   project      = var.project_id
+resource "google_service_account" "web_vm_sa" {
+  account_id   = "web-vm-sa"
+  display_name = "Web VM Service Account"
+  description  = "Service account for web server VM"
+  project      = var.project_id
 
-#   depends_on = [google_project_service.enabled_apis]
-# }
+  depends_on = [google_project_service.enabled_apis]
+}
 
 # # Grant necessary roles to the service account
 # resource "google_project_iam_member" "web_vm_sa_log_writer" {
@@ -55,13 +55,8 @@ module "web_vm" {
   }]
 
   # Use custom service account
-  # service_account = {
-  #   email  = google_service_account.web_vm_sa.email
-  #   scopes = ["cloud-platform"]
-  # }
-
   service_account = {
-    email  = data.google_compute_default_service_account.default.email
+    email  = google_service_account.web_vm_sa.email
     scopes = ["cloud-platform"]
   }
 
