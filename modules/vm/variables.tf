@@ -80,3 +80,15 @@ variable "access_config" {
     network_tier = "PREMIUM"
   }]
 }
+
+variable "service_account" {
+  description = "Service account to attach to the instance"
+  type = object({
+    email  = string
+    scopes = list(string)
+  })
+  default = {
+    email  = ""
+    scopes = ["cloud-platform"]
+  }
+}
