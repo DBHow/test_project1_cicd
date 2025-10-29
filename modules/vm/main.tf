@@ -33,4 +33,5 @@ module "compute_instance" {
   hostname            = var.vm_name
   add_hostname_suffix = false
   instance_template   = module.instance_template.self_link
+  access_config       = var.access_config
 }
