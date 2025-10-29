@@ -2,7 +2,7 @@
     "environment": "dev",
     "project_id": "dev-project-476123",
     "region": "us-south1",
-    "version": "0.2.3",
-    "description": "add vm",
+    "version": "0.2.4",
+    "description": "remove vm",
     "submitter": "Gang.Hao"
 }
