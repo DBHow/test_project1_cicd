@@ -87,8 +87,4 @@ variable "service_account" {
     email  = string
     scopes = list(string)
   })
-  default = {
-    email  = ""
-    scopes = ["cloud-platform"]
-  }
 }
